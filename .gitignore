@@ -1,5 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+.env
+
 # compiled output
 dist
 tmp
@@ -40,3 +42,7 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

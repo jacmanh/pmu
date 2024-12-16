@@ -1,11 +1,20 @@
-import NxWelcome from './nx-welcome';
+import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
+import { Home } from '../pages/Home';
+import { Race } from '../pages/Race';
 
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="pmu" />
-    </div>
-  );
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home />,
+    },
+    {
+      path: '/race/:id',
+      element: <Race />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
